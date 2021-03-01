@@ -1,12 +1,16 @@
 package myapp
 
+import myplugin.EmailService
+
 class PluginController {
 
+    EmailService emailService
+
     def index() {
-        render(view: "/hello/hello", plugin: 'myplugin')
+        render(view: "/hello/hello")
     }
 
     def mail() {
-        render(template:"/mail/email", plugin: 'myplugin')
+        emailService.sendEmail()
     }
 }
