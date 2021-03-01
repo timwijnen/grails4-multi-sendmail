@@ -3,7 +3,7 @@ package myapp
 class PluginController {
 
     def index() {
-        render(view: "/plugin/plugin", plugin: 'myplugin')
+        render(view: "/hello/hello", plugin: 'myplugin')
     }
 
     def mail() {
